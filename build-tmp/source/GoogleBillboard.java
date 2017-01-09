@@ -32,6 +32,15 @@ public void setup()
      		break;
      	}
      }
+     for (int i = 2; i < e.length() - 10; i++)
+     {
+        digits = e.substring(i, 10 + i);
+        if (is49(digits) == true)
+        {
+            System.out.println(section);
+        }
+        System.out.println("e");
+     }
 }  
 public void draw()  
 {   
@@ -57,6 +66,14 @@ public boolean is49(String rNum)
 		double z = Double.parseDouble(rNum);
 		t += z;
 	}
+    if (t == 49)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "GoogleBillboard" };
